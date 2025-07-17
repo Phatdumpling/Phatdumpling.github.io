@@ -1,6 +1,46 @@
+let isPaused = false;
+let pauseResolvers = [];
+
+
+function sleep(ms) {
+  return new Promise(resolve => {
+    const check = () => {
+      if (isPaused) {
+        pauseResolve = () => setTimeout(check, 10);
+      } else {
+        setTimeout(resolve, ms);
+      }
+    };
+    check();
+  });
+}
+/*
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
+}*/
+function waitWhilePaused() {
+  return new Promise(resolve => {
+    if (!isPaused) {
+      resolve();
+    } else {
+      pauseResolvers.push(resolve);
+    }
+  });
 }
+
+function pauseAnimation() {
+  isPaused = true;
+}
+
+function resumeAnimation() {
+  isPaused = false;
+  while (pauseResolvers.length > 0) {
+    const resolve = pauseResolvers.pop();
+    resolve();
+  }
+}
+
+
 
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -8,6 +48,46 @@ function shuffle(array) {
         [array[i], array[j]] = [array[j], array[i]];
     }
     return array;
+}
+
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+function initAudio() {
+  if (!audioCtx) {
+    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  }
+  if (audioCtx.state === 'suspended') {
+    audioCtx.resume();
+  }
+  document.removeEventListener('click', initAudio);
+}
+
+// Add a one-time listener to unlock audio on first click anywhere
+document.addEventListener('click', initAudio);
+
+async function playBeep(frequency = 440, duration = 10, volume = 0.1) {
+
+    return new Promise((resolve) => {
+    const now = audioCtx.currentTime;
+    const oscillator = audioCtx.createOscillator();
+    const gainNode = audioCtx.createGain();
+
+    oscillator.type = 'sine';
+    oscillator.frequency.setValueAtTime(frequency, now);
+
+    gainNode.gain.setValueAtTime(volume, now);
+    gainNode.gain.linearRampToValueAtTime(0, now + duration / 1000);
+
+    oscillator.connect(gainNode);
+    gainNode.connect(audioCtx.destination);
+
+    oscillator.start(now);
+    oscillator.stop(now + duration / 1000);
+
+    oscillator.onended = () => {
+        resolve();
+    };
+    });
 }
 
 async function MergeAnimate(CurElementID, ArrayLength = 100) {
@@ -59,6 +139,8 @@ async function MergeAnimate(CurElementID, ArrayLength = 100) {
         } 
         //parSyntaxStart + "aaa a" + parSyntaxEnd + parSyntaxStart + "aaaaa" + parSyntaxEnd
 
+        
+
         document.getElementById(CurElementID).innerHTML = sorting;
     }
 
@@ -98,6 +180,10 @@ async function MergeAnimate(CurElementID, ArrayLength = 100) {
         for (let k = 0; k < merged.length; k++) {
             vals[startidx + k] = merged[k];
             RenderSort([startidx, startidx + k]);
+
+            playBeep(1000*merged[k]/ArrayLength, 100, 0.02);
+            
+            await waitWhilePaused();
             await sleep(0);
         }
             RenderSort();

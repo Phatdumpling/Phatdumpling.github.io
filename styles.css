@@ -77,8 +77,32 @@ img.center.shakable:hover {
 
 
 .banner1 {
-  display: flex;
-  align-items: center;           /* vertically center all */
-  justify-content: center;       /* center all horizontally */
-  gap: 1rem;
+display: flex;
+align-items: center;           /* vertically center all */
+justify-content: center;       /* center all horizontally */
+gap: 1rem;
 }
+
+.button-wrapper {
+  display: flex;
+  justify-content: center; /* center the whole group */
+  gap: 0.5rem;
+  flex-wrap: wrap; /* optional: wrap on small screens */
+}
+
+.btn {
+  padding: 1rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-family: sans-serif;
+  white-space: nowrap;
+}
+
+.btn.big {
+  font-size: 1.2rem;
+  padding: 1rem 1.5 rem; /* wider */
+}
+
+
