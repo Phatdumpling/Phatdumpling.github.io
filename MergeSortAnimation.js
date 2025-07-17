@@ -102,19 +102,19 @@ async function MergeAnimate(CurElementID, ArrayLength = 100) {
     //var vals = Array.from({ length: 150 }, (_, i) => i + 1).sort(() => Math.random()); reverse
     //var vals = Array.from({ length: 150 }, (_, i) => i + 1).sort(() => Math.random()-1);
 
-    var vals = shuffle([...Array(ArrayLength).keys()].map(n => n + 1));
+    let vals = shuffle([...Array(ArrayLength).keys()].map(n => n + 1));
     console.log(vals);
 
     var displayChar = "█";
 
     function RenderSort(highlightRange = [-1, -1]) {
-        var maxval = Math.max(...vals);
-        var sorting = "";
+        let maxval = Math.max(...vals);
+        let sorting = "";
 
         for (let i = 0; i < maxval; i++) {
 
             // Initialize row
-            var currow = "";
+            let currow = "";
             for (let j = 0; j < vals.length; j++) {
 
                 // First span index in row
@@ -198,7 +198,7 @@ async function MergeAnimate(CurElementID, ArrayLength = 100) {
 
 async function repeatMergeAnimate(id, arraylength, ratio=750, scoreid = null) {
 
-    var curFontSize = ((1/arraylength)*ratio).toString() + "px"
+    let curFontSize = ((1/arraylength)*ratio).toString() + "px"
     document.getElementById(id).style.fontSize = curFontSize;
 
     let count = 0
@@ -227,10 +227,4 @@ async function repeatMergeAnimate(id, arraylength, ratio=750, scoreid = null) {
 
         await sleep(500);
     }
-}
-
-let animate = true
-if (animate) {
-    repeatMergeAnimate("sort1", 300, ratio=750, scoreid="sorted1");
-    repeatMergeAnimate("sort2", 50, ratio=750, scoreid="sorted2");
 }

@@ -47,9 +47,14 @@
     </div>
 
     <div class="button-wrapper">
+      <a href="gpudeath.html" class="btn">Click here for lag</a>
+    </div>
+
+    <div class="button-wrapper">
       <button onclick="pauseAnimation()">Pause Animation</button>
       <button onclick="resumeAnimation()">Resume Animation</button>
     </div>
+
     <p class="centertext"></p> <!-- Something was supposed to be here -->
 
     <div class="centertext">
@@ -71,6 +76,11 @@
     <script src="MergeSortAnimation.js"></script>
 
   <script>
+    let animate = true
+    if (animate) {
+        repeatMergeAnimate("sort1", 300, ratio=750, scoreid="sorted1");
+        repeatMergeAnimate("sort2", 50, ratio=750, scoreid="sorted2");
+    }
   </script>
 
   </body>
