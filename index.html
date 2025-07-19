@@ -6,8 +6,12 @@
   </head>
   <body>
 
-    <div id="menu-container"></div>
-    <script src="menu.js"></script>
+    <ul class="menu">
+      <li class="menu-item"><a class="menu-link active" href="index.html">Home</a></li>
+      <li class="menu-item"><a class="menu-link" href="#news">N/A</a></li>
+      <li class="menu-item"><a class="menu-link" href="#contact">N/A</a></li>
+      <li class="right-align"><a class="menu-link" href="gpudeath.html">Lag</a></li>
+    </ul>
 
     
     <div class="banner1">
@@ -20,6 +24,13 @@
       <!-- Center Image -->
       <div>
         <img src="imgs/Phatdumpling.jpg" class="center shakable" alt="A Phatdumpling">
+
+        <br><br><br>
+
+        <div class="button-wrapper">
+          <button onclick="pauseAnimation()">Pause Animation</button>
+          <button onclick="resumeAnimation()">Resume Animation</button>
+        </div>
       </div>
       
       <!-- Second Sorter -->
@@ -28,6 +39,8 @@
       </div>
 
     </div>
+
+    <br>
 
     <div class="banner1">
 
@@ -38,7 +51,20 @@
 
       <!-- Center object -->
        <div class ="block">
-        <p></p>
+          <div class="button-wrapper">
+            <a href="ResumeFangLeiWu.pdf" class="btn big"><b>Download Resume</b></a>
+            <a href="https://linkedin.com/in/fang-lei-wu-b463201bb" class="btn" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 34 34" style="vertical-align: middle;">
+                <rect width="34" height="34" fill="black" rx="4" />
+                <path d="M8 13h4v13H8V13zm2-6a2.3 2.3 0 1 1 0 4.6 2.3 2.3 0 0 1 0-4.6zM14 13h4v1.8h.1c.6-1.1 2-2.3 4.2-2.3 4.5 0 5.3 3 5.3 6.9V26h-4v-6.2c0-1.5 0-3.5-2.2-3.5s-2.6 1.7-2.6 3.4V26h-4V13z" fill="white"/>
+              </svg>
+            </a>
+            <a href="https://github.com/Phatdumpling" class="btn" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle;">
+                <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.1 3.29 9.42 7.86 10.96.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.35-1.3-1.7-1.3-1.7-1.06-.72.08-.7.08-.7 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.75.4-1.27.72-1.56-2.56-.3-5.25-1.28-5.25-5.7 0-1.26.45-2.3 1.2-3.12-.12-.3-.52-1.5.12-3.13 0 0 .98-.31 3.22 1.2a11.3 11.3 0 0 1 5.86 0c2.24-1.5 3.22-1.2 3.22-1.2.64 1.63.24 2.83.12 3.13.75.82 1.2 1.86 1.2 3.12 0 4.44-2.7 5.4-5.28 5.68.4.34.76 1.02.76 2.06v3.05c0 .3.2.67.8.56A10.52 10.52 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5z"/>
+              </svg>
+            </a>
+          </div>
        </div>
       
       
@@ -49,31 +75,12 @@
 
     </div>
 
-    <div class="button-wrapper">
-      <a href="" class="btn">Click here for lag</a>
-    </div>
-
-    <div class="button-wrapper">
-      <button onclick="pauseAnimation()">Pause Animation</button>
-      <button onclick="resumeAnimation()">Resume Animation</button>
-    </div>
-
     <p class="centertext"></p> <!-- Something was supposed to be here -->
 
     <div class="centertext">
       <h1> Hi! I'm Fang Lei Wu, a graduate of Queens University with a Bachelor's of Computing </h1>
       <h2> I have major interests in Artificial Intelligence, Data Analytics, Game Development and Software Development </h2>
-    </div>
-
-    <!--
-    <div class="button-wrapper">
-      <a href="#" class="btn big">Big</a>
-      <a href="#" class="btn">S1</a>
-      <a href="#" class="btn">S2</a>
-    </div>
-    -->
-    
-    
+    </div>    
     
 
     <script src="MergeSortAnimation.js"></script>

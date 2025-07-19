@@ -67,6 +67,7 @@ img.center.shakable:hover {
   text-align: center;
 
   padding: 10px 0px;
+  height: 400px;
 }
 
 .block {
@@ -96,20 +97,35 @@ gap: 1rem;
 }
 
 .btn {
-  padding: 1rem 1.5rem;
-  background-color: #007bff;
-  color: white;
+  display: inline-flex; /* allows centering both text and svg */
+  align-items: center;  /* vertical centering */
+  justify-content: center; /* horizontal centering */
+  
+  padding: 1.5rem 1.5rem;
+  background-color: white;
+  color: black;
+
+  border: 1px solid black;
+  border-radius: 5px;
   text-decoration: none;
-  border-radius: 6px;
   font-family: sans-serif;
   white-space: nowrap;
+
+  height: 72px; /* match height across all buttons */
+  min-width: 72px; /* ensure icon buttons aren't tiny */
+  box-sizing: border-box;
+  
 }
 
 .btn.big {
   font-size: 1.2rem;
-  padding: 1rem 1.5 rem; /* wider */
+  padding: 1.5rem 4.5rem; /* wider */
 }
 
+.btn svg {
+  width: 48px;
+  height: 48px;
+}
 
 .menu {
   list-style-type: none;
