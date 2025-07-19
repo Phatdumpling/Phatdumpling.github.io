@@ -45,6 +45,8 @@ img.center.shakable:hover {
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
+/* Sorter block #########################################################################################################*/
+
 .closepars {
   margin-top: 0px;
   margin-bottom: 0px;
@@ -75,6 +77,7 @@ img.center.shakable:hover {
   text-align: center;
 }
 
+/* Banner block #########################################################################################################*/
 
 .banner1 {
 display: flex;
@@ -82,6 +85,8 @@ align-items: center;           /* vertically center all */
 justify-content: center;       /* center all horizontally */
 gap: 1rem;
 }
+
+/* Buttons #########################################################################################################*/
 
 .button-wrapper {
   display: flex;
@@ -103,6 +108,39 @@ gap: 1rem;
 .btn.big {
   font-size: 1.2rem;
   padding: 1rem 1.5 rem; /* wider */
+}
+
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.menu-item {
+  float: left;
+}
+
+.right-align {
+  float: right;
+}
+
+.menu-link {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.menu-link:hover:not(.active) {
+  background-color: #111;
+}
+
+.menu-link.active {
+  background-color: #04AA6D;
 }
 
 
