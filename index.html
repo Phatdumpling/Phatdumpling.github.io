@@ -3,95 +3,344 @@
   <head>
     <title>Fang's Website</title>
     <link rel="stylesheet" href="styles.css">
+          
   </head>
   <body>
 
-    <ul class="menu">
-      <li class="menu-item"><a class="menu-link active" href="index.html">Home</a></li>
-      <li class="menu-item"><a class="menu-link" href="#news">N/A</a></li>
-      <li class="menu-item"><a class="menu-link" href="#contact">N/A</a></li>
-      <li class="right-align"><a class="menu-link" href="gpudeath.html">Lag</a></li>
-    </ul>
+    <div id="intro">Hello</div>
+    <script src="intro.js"></script>
+    <script>
+      setTimeout(cycleGreetings, 100);
+    </script>
+
+
+
+    <div id="main-content"> <!-- Main content start -->
+    
+      <ul class="menu">
+        <li class="menu-item"><a class="menu-link active" href="index.html">Home</a></li>
+        <li class="right-align"><a class="menu-link" href="gpudeath.html">Lag</a></li>
+      </ul>
 
     
-    <div class="banner1">
+      <div class="banner1">
 
-      <!-- First Sorter -->
-      <div class = "tightblocks" style="background-color:#FFF4A3;">
-        <p id = "sort1" class="closepars"> test </p>
-      </div>
-
-      <!-- Center Image -->
-      <div>
-        <img src="imgs/Phatdumpling.jpg" class="center shakable" alt="A Phatdumpling">
-
-        <br><br><br>
-
-        <div class="button-wrapper">
-          <button onclick="pauseAnimation()">Pause Animation</button>
-          <button onclick="resumeAnimation()">Resume Animation</button>
+        <!-- First Sorter -->
+        <div class = "tightblocks" style="background-color:white;">
+          <p id = "sort1" class="closepars" style="font-size: 30px;"> Animation is off </p>
         </div>
-      </div>
-      
-      <!-- Second Sorter -->
-      <div class = "tightblocks" style="background-color:#FFC0C7;">
-        <p id = "sort2" class="closepars"> test </p>
-      </div>
 
-    </div>
+        <!-- Center Image -->
+        <div>
+          <img src="imgs/Phatdumpling.jpg" class="center shakable" alt="A Phatdumpling">
 
-    <br>
+          <br><br><br>
 
-    <div class="banner1">
-
-      <!-- Sorter Counter 1 -->
-      <div class ="block">
-        <p id = "sorted1"> test </p>
-      </div>
-
-      <!-- Center object -->
-       <div class ="block">
           <div class="button-wrapper">
-            <a href="ResumeFangLeiWu.pdf" class="btn big"><b>Download Resume</b></a>
-            <a href="https://linkedin.com/in/fang-lei-wu-b463201bb" class="btn" target="_blank" rel="noopener noreferrer">
-              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 34 34" style="vertical-align: middle;">
-                <rect width="34" height="34" fill="black" rx="4" />
-                <path d="M8 13h4v13H8V13zm2-6a2.3 2.3 0 1 1 0 4.6 2.3 2.3 0 0 1 0-4.6zM14 13h4v1.8h.1c.6-1.1 2-2.3 4.2-2.3 4.5 0 5.3 3 5.3 6.9V26h-4v-6.2c0-1.5 0-3.5-2.2-3.5s-2.6 1.7-2.6 3.4V26h-4V13z" fill="white"/>
-              </svg>
-            </a>
-            <a href="https://github.com/Phatdumpling" class="btn" target="_blank" rel="noopener noreferrer">
-              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle;">
-                <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.1 3.29 9.42 7.86 10.96.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.35-1.3-1.7-1.3-1.7-1.06-.72.08-.7.08-.7 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.75.4-1.27.72-1.56-2.56-.3-5.25-1.28-5.25-5.7 0-1.26.45-2.3 1.2-3.12-.12-.3-.52-1.5.12-3.13 0 0 .98-.31 3.22 1.2a11.3 11.3 0 0 1 5.86 0c2.24-1.5 3.22-1.2 3.22-1.2.64 1.63.24 2.83.12 3.13.75.82 1.2 1.86 1.2 3.12 0 4.44-2.7 5.4-5.28 5.68.4.34.76 1.02.76 2.06v3.05c0 .3.2.67.8.56A10.52 10.52 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5z"/>
-              </svg>
-            </a>
+            <button class="button1" onclick="pauseAnimation()">Pause Animation</button>
+            <button class="button1" onclick="resumeAnimation()">Resume Animation</button>
           </div>
-       </div>
-      
-      
-      <!-- Sorter Counter 2 -->
-      <div class ="block">
-        <p id = "sorted2"> test </p>
+        </div>
+        
+        <!-- Second Sorter -->
+        <div class = "tightblocks" style="background-color:white;">
+          <p id = "sort2" class="closepars" style="font-size: 30px;"> Animation is off </p>
+        </div>
+
       </div>
 
-    </div>
+      <br>
 
-    <p class="centertext"></p> <!-- Something was supposed to be here -->
+      <div class="infoblock">
+        <div class="banner1">
 
-    <div class="centertext">
-      <h1> Hi! I'm Fang Lei Wu, a graduate of Queens University with a Bachelor's of Computing </h1>
-      <h2> I have major interests in Artificial Intelligence, Data Analytics, Game Development and Software Development </h2>
-    </div>    
-    
+          <!-- Sorter Counter 1 -->
+          <div class ="block">
+            <p id = "sorted1"> test </p>
+          </div>
 
-    <script src="MergeSortAnimation.js"></script>
+          <div class ="block"></div>
+          <!-- Center 
+          <div class ="block">
+              <div class="button-wrapper">
+                <a href="ResumeFangLeiWu.pdf" class="btn big"><b>Download Resume</b></a>
+                <a href="https://linkedin.com/in/fang-lei-wu-b463201bb" class="btn" target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 34 34" style="vertical-align: middle;">
+                    <rect width="34" height="34" fill="black" rx="4" />
+                    <path d="M8 13h4v13H8V13zm2-6a2.3 2.3 0 1 1 0 4.6 2.3 2.3 0 0 1 0-4.6zM14 13h4v1.8h.1c.6-1.1 2-2.3 4.2-2.3 4.5 0 5.3 3 5.3 6.9V26h-4v-6.2c0-1.5 0-3.5-2.2-3.5s-2.6 1.7-2.6 3.4V26h-4V13z" fill="white"/>
+                  </svg>
+                </a>
+                <a href="https://github.com/Phatdumpling" class="btn" target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle;">
+                    <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.1 3.29 9.42 7.86 10.96.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.35-1.3-1.7-1.3-1.7-1.06-.72.08-.7.08-.7 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.75.4-1.27.72-1.56-2.56-.3-5.25-1.28-5.25-5.7 0-1.26.45-2.3 1.2-3.12-.12-.3-.52-1.5.12-3.13 0 0 .98-.31 3.22 1.2a11.3 11.3 0 0 1 5.86 0c2.24-1.5 3.22-1.2 3.22-1.2.64 1.63.24 2.83.12 3.13.75.82 1.2 1.86 1.2 3.12 0 4.44-2.7 5.4-5.28 5.68.4.34.76 1.02.76 2.06v3.05c0 .3.2.67.8.56A10.52 10.52 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5z"/>
+                  </svg>
+                </a>
+              </div>
+          </div>object -->
+          
+          
+          <!-- Sorter Counter 2 -->
+          <div class ="block">
+            <p id = "sorted2"> test </p>
+          </div>
 
-  <script>
-    let animate = true
-    if (animate) {
-        repeatMergeAnimate("sort1", 300, ratio=750, scoreid="sorted1");
-        repeatMergeAnimate("sort2", 50, ratio=750, scoreid="sorted2");
-    }
-  </script>
+        </div>
 
+        <p class="centertext"></p> <!-- Something was supposed to be here -->
+
+          <div class="nametext">
+            <h1>Fang Lei Wu</h1>
+            <p>Machine Learning, Python, Data Analysis, Software</p>
+
+            <div class="social-links">
+              <!-- GitHub -->
+              <a href="https://github.com/yourusername" target="_blank" class="icon-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.5 1 3.1.7.1-.6.3-1 .6-1.3-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.3 0 0 1-.3 3.4 1.2a11.9 11.9 0 0 1 6.2 0c2.4-1.5 3.4-1.2 3.4-1.2.6 1.7.2 3 .1 3.3.8.8 1.2 1.9 1.2 3.2 0 4.6-2.7 5.6-5.3 5.9.4.3.7.9.7 1.9v2.9c0 .3.2.7.8.6A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/>
+                </svg>
+              </a>
+
+              <!-- LinkedIn -->
+              <a href="https://linkedin.com/in/yourprofile" target="_blank" class="icon-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2ZM8.3 18.3H5.6V9.4h2.7v8.9ZM7 8.3a1.6 1.6 0 1 1 0-3.1 1.6 1.6 0 0 1 0 3.1Zm12 10h-2.7v-4.7c0-1.1-.4-1.9-1.5-1.9-.8 0-1.3.5-1.6 1-.1.2-.1.5-.1.8v4.8H10.4V9.4h2.6v1.2c.4-.6 1.1-1.5 2.8-1.5 2 0 3.3 1.3 3.3 4.1v5.1Z"/>
+                </svg>
+              </a>
+
+              <!-- Resume -->
+              <a href="resume.pdf" target="_blank" class="icon-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8Zm1 7H9V7h6Zm-2 4H9v-2h4Zm4 6H7v-2h10Z"/>
+                </svg>
+              </a>
+            </div>
+
+
+            <p>Skills</p>
+              <div class="allskills">
+                <span class="allskill">Python</span>
+                <span class="allskill">Java</span>
+                <span class="allskill">Git</span>
+                <span class="allskill">C</span>
+                <span class="allskill">C#</span>
+                <span class="allskill">SQL</span>
+                <span class="allskill">HTML</span>
+                <span class="allskill">Javascript</span>
+                <span class="allskill">Node js</span>
+                <span class="allskill">CSS</span>
+                <span class="allskill">PHP</span>
+                <span class="allskill">Bash Script</span>
+                <span class="allskill">Batch Script</span>
+                <span class="allskill">Docker</span>
+                <span class="allskill">Unity</span>
+                <span class="allskill">Pytorch</span>
+                <span class="allskill">Tensorflow</span>
+                <span class="allskill">Sci-kit</span>
+                <span class="allskill">Seaborn</span>
+              </div>
+            <div class="scrollskills-section">
+            <p class="scrollskills-title">Skills</p>
+            <div class="scrollskills-carousel">
+              <div class="scrollskills-track">
+                <!-- Repeat icons twice for smooth infinite loop -->
+                <img src="icons/python.svg" alt="Python" class="scrollskill-icon" />
+                <img src="icons/java.svg" alt="Java" class="scrollskill-icon" />
+                <img src="icons/git.svg" alt="Git" class="scrollskill-icon" />
+                <img src="icons/c.svg" alt="C" class="scrollskill-icon" />
+                <img src="icons/csharp.svg" alt="C#" class="scrollskill-icon" />
+                <img src="icons/sql.svg" alt="SQL" class="scrollskill-icon" />
+                <img src="icons/html.svg" alt="HTML" class="scrollskill-icon" />
+                <img src="icons/javascript.svg" alt="JavaScript" class="scrollskill-icon" />
+                <img src="icons/nodejs.svg" alt="Node.js" class="scrollskill-icon" />
+                <img src="icons/css.svg" alt="CSS" class="scrollskill-icon" />
+                <img src="icons/php.svg" alt="PHP" class="scrollskill-icon" />
+                <img src="icons/bash.svg" alt="Bash" class="scrollskill-icon" />
+                <img src="icons/batch.png" alt="Batch Script" class="scrollskill-icon" />
+                <img src="icons/docker.svg" alt="Docker" class="scrollskill-icon" />
+                <img src="icons/unity.svg" alt="Unity" class="scrollskill-icon" />
+                <img src="icons/pytorch.svg" alt="Pytorch" class="scrollskill-icon" />
+                <img src="icons/tensorflow.svg" alt="Tensorflow" class="scrollskill-icon" />
+                <img src="icons/scikit.svg" alt="Sci-kit" class="scrollskill-icon" />
+                <!--<img src="icons/seaborn.svg" alt="Seaborn" class="scrollskill-icon" />-->
+
+                <!-- duplicate for infinite effect -->
+                <img src="icons/python.svg" alt="Python" class="scrollskill-icon" />
+                <img src="icons/java.svg" alt="Java" class="scrollskill-icon" />
+                <img src="icons/git.svg" alt="Git" class="scrollskill-icon" />
+                <img src="icons/c.svg" alt="C" class="scrollskill-icon" />
+                <img src="icons/csharp.svg" alt="C#" class="scrollskill-icon" />
+                <img src="icons/sql.svg" alt="SQL" class="scrollskill-icon" />
+                <img src="icons/html.svg" alt="HTML" class="scrollskill-icon" />
+                <img src="icons/javascript.svg" alt="JavaScript" class="scrollskill-icon" />
+                <img src="icons/nodejs.svg" alt="Node.js" class="scrollskill-icon" />
+                <img src="icons/css.svg" alt="CSS" class="scrollskill-icon" />
+                <img src="icons/php.svg" alt="PHP" class="scrollskill-icon" />
+                <img src="icons/bash.svg" alt="Bash" class="scrollskill-icon" />
+                <img src="icons/batch.png" alt="Batch Script" class="scrollskill-icon" />
+                <img src="icons/docker.svg" alt="Docker" class="scrollskill-icon" />
+                <img src="icons/unity.svg" alt="Unity" class="scrollskill-icon" />
+                <img src="icons/pytorch.svg" alt="Pytorch" class="scrollskill-icon" />
+                <img src="icons/tensorflow.svg" alt="Tensorflow" class="scrollskill-icon" />
+                <img src="icons/scikit.svg" alt="Sci-kit" class="scrollskill-icon" />
+                <!--<img src="icons/seaborn.svg" alt="Seaborn" class="scrollskill-icon" />-->
+              </div>
+            </div>
+          </div>
+
+          </div>
+
+        
+      </div>
+
+      <script src="MergeSortAnimation.js"></script>
+
+      <script>
+        let animate = true
+        if (animate) {
+            repeatMergeAnimate("sort1", 300, ratio=750, scoreid="sorted1");
+            repeatMergeAnimate("sort2", 50, ratio=750, scoreid="sorted2");
+        }
+      </script>
+
+
+
+      <section class="projects"> 
+        <h2>My Projects</h2>
+        <!-- <span class="skill">temp</span> -->
+
+        <div class="project-grid">
+
+          <div class="project-card">
+            <img src="projects\taassignment.png" alt="Project 1">
+            <div class="content">
+              <h3>Teaching Assistant Assignment Simulation</h3>
+              <p>Research into algorithms to assign Teaching Assistants to Courses in an Agent Based Environment.</p>
+              <div class="skills">
+                <span class="skill">Python</span>
+                <span class="skill">Mesa</span>
+                <span class="skill">Pandas</span>
+                <span class="skill">Jupyter Notebook</span>
+                <span class="skill">HPC</span>
+                <span class="skill">Simulation</span>
+                <span class="skill">CSP</span>
+              </div>
+              <a href="https://github.com/QuMuLab/ta-assignment" class="project-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61 -4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756 -1.09-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.807 1.305 3.492 .998.108-.776.418-1.305.76-1.605-2.665-.3-5.466 -1.332-5.466-5.931 0-1.31.467-2.381 1.235-3.221 -.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04 .138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23 .645 1.653.24 2.873.12 3.176.765.84 1.23 1.911 1.23 3.221 0 4.609-2.805 5.625-5.475 5.921.42.36 .81 1.096.81 2.21 0 1.595-.015 2.877-.015 3.273 0 .315.21.69.825.573C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                </svg>
+                Source
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img src="projects/openrev.png" alt="Project 2">
+            <div class="content">
+              <h3>Open Review Reproduction</h3>
+              <p>Reproduction attempt of MNIST challenge from 2017 - 2022 using the MNIST and CIFAR-10 datasets.</p>
+              <div class="skills">
+                <span class="skill">Python</span>
+                <span class="skill">Tensorflow</span>
+                <span class="skill">Numpy</span>
+                <span class="skill">Jupyter Notebook</span>
+                <span class="skill">Adversarial Machine Learning</span>
+                <span class="skill">Legacy Code</span>
+                <span class="skill">Reproduction</span>
+              </div>
+              <a href="https://github.com/Phatdumpling/Open-Review-Reproduction-Attempt" class="project-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61 -4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756 -1.09-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.807 1.305 3.492 .998.108-.776.418-1.305.76-1.605-2.665-.3-5.466 -1.332-5.466-5.931 0-1.31.467-2.381 1.235-3.221 -.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04 .138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23 .645 1.653.24 2.873.12 3.176.765.84 1.23 1.911 1.23 3.221 0 4.609-2.805 5.625-5.475 5.921.42.36 .81 1.096.81 2.21 0 1.595-.015 2.877-.015 3.273 0 .315.21.69.825.573C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                </svg>
+                Source
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img src="projects/paradopple.png" alt="Project 3">
+            <div class="content">
+              <h3>Paradopple</h3>
+              <p>Puzzle tile movement game about time travel.</p>
+              <div class="skills">
+                <span class="skill">Unity</span>
+                <span class="skill">C#</span>
+                <span class="skill">Game Development</span>
+                <span class="skill">2D Game</span>
+              </div>
+              <a href="https://phatdumpling.itch.io/paradopple" class="project-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 34 34" aria-label="itch.io" role="img" style="vertical-align: middle;">
+                  <rect width="34" height="34" rx="4" fill="none"/>
+                  <image href="https://static.itch.io/images/itchio-textless-white.svg" x="4" y="4" width="26" height="26" />
+                </svg>
+                Itch.io
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img src="projects/diorama.png" alt="Project 4">
+            <div class="content">
+              <h3>Diorama Flashcards</h3>
+              <p>Web based image flashcard app. Made due to not wanting to use quizlet.</p>
+              <div class="skills">
+                <span class="skill">HTML</span>
+                <span class="skill">Javascript</span>
+                <span class="skill">Web Application</span>
+              </div>
+              <a href="https://github.com/Phatdumpling/Diorama-Program" class="project-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61 -4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756 -1.09-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.807 1.305 3.492 .998.108-.776.418-1.305.76-1.605-2.665-.3-5.466 -1.332-5.466-5.931 0-1.31.467-2.381 1.235-3.221 -.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04 .138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23 .645 1.653.24 2.873.12 3.176.765.84 1.23 1.911 1.23 3.221 0 4.609-2.805 5.625-5.475 5.921.42.36 .81 1.096.81 2.21 0 1.595-.015 2.877-.015 3.273 0 .315.21.69.825.573C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                </svg>
+                Source
+              </a>
+            </div>
+          </div>
+          
+          <!-- 
+          <div class="project-card">
+            <img src="imgs/Red_Amogus.webp" alt="Project 5">
+            <div class="content">
+              <h3>Discord Data thing and bot</h3>
+              <p>A bot that pulls all messages from a discord server and see what your friend group likes to say or who gambles the most on owo bot.</p>
+              <div class="skills">
+                <span class="skill">Python</span>
+                <span class="skill">Jupyter Notebook</span>
+                <span class="skill">Pandas</span>
+                <span class="skill">Discord</span>
+              </div>
+              <a href="#" class="project-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61 -4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756 -1.09-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.807 1.305 3.492 .998.108-.776.418-1.305.76-1.605-2.665-.3-5.466 -1.332-5.466-5.931 0-1.31.467-2.381 1.235-3.221 -.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04 .138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23 .645 1.653.24 2.873.12 3.176.765.84 1.23 1.911 1.23 3.221 0 4.609-2.805 5.625-5.475 5.921.42.36 .81 1.096.81 2.21 0 1.595-.015 2.877-.015 3.273 0 .315.21.69.825.573C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                </svg>
+                Source
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img src="imgs/Red_Amogus.webp" alt="Project 6">
+            <div class="content">
+              <h3>CNN temp</h3>
+              <p>CNN Cancer detection that I wanna do.</p>
+              <div class="skills">
+                <span class="skill">test</span>
+                <span class="skill">test</span>
+                <span class="skill">test</span>
+                <span class="skill">test</span>
+                <span class="skill">test</span>
+                <span class="skill">test</span>
+              </div>
+              <a href="#" class="project-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61 -4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756 -1.09-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.807 1.305 3.492 .998.108-.776.418-1.305.76-1.605-2.665-.3-5.466 -1.332-5.466-5.931 0-1.31.467-2.381 1.235-3.221 -.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04 .138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23 .645 1.653.24 2.873.12 3.176.765.84 1.23 1.911 1.23 3.221 0 4.609-2.805 5.625-5.475 5.921.42.36 .81 1.096.81 2.21 0 1.595-.015 2.877-.015 3.273 0 .315.21.69.825.573C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                </svg>
+                Source
+              </a>
+            </div>
+          </div>-->
+
+        </div>
+      </section>
+    </div> <!-- Main content end -->
   </body>
 </html>
